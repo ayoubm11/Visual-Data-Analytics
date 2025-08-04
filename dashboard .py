@@ -7,6 +7,8 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import seaborn as sns
 import os
 
+
+
 try:
     connection = mysql.connector.connect(
         host='localhost',
@@ -42,7 +44,7 @@ finally:
     if connection and connection.is_connected():
         cursor.close()
         connection.close()
-        print("\nMySQL connection is closed")
+        print("\nMySQL connection is closed") 
 
 colors = sns.color_palette('pastel')
 plt.rcParams["axes.prop_cycle"] = plt.cycler(color=colors)
